@@ -16,3 +16,7 @@
 *.ipr
 .idea/
 .mvn/
+/vcs.xml
+/misc.xml
+/compiler.xml
+/encodings.xml
