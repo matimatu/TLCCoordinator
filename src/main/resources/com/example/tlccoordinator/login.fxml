@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tlccoordinator.controllers.CControllerLogin">
+    <left>
+        <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #E96151;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutY="136.0" prefHeight="17.0" prefWidth="227.0" text="TLC Coordinator" textFill="#f7f4f4">
+                    <font>
+                        <Font name="Verdana Bold" size="21.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Label alignment="CENTER" layoutX="1.0" layoutY="166.0" prefHeight="17.0" prefWidth="227.0" text="Created by Matu" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Line endX="94.0" layoutX="115.0" layoutY="166.0" startX="-89.0" stroke="WHITE">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Line>
+                <Circle fill="#80505000" layoutX="115.0" layoutY="167.0" radius="100.0" stroke="#403636" strokeType="INSIDE" />
+                <Circle fill="WHITE" layoutX="114.0" layoutY="79.0" radius="57.0" stroke="#506375" strokeType="INSIDE" />
+                <ImageView fitHeight="61.0" fitWidth="86.0" layoutX="71.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../../images/funnyJesus.jpeg" />
+                </ImageView>
+                <Label alignment="CENTER" layoutX="6.0" layoutY="309.0" prefHeight="17.0" prefWidth="227.0" text="Copyright(c) all rights reserved" textFill="WHITE">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="27.0" layoutY="37.0" prefHeight="17.0" prefWidth="227.0" text="Entra nel programma">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Label>
+                <Label layoutX="27.0" layoutY="93.0" text="Username">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="27.0" layoutY="140.0" text="Password">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordTextField" layoutX="107.0" layoutY="130.0" promptText="Password" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="31.0" />
+                <TextField fx:id="usernameTextField" layoutX="107.0" layoutY="84.0" promptText="Username" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="31.0" />
+                <Button fx:id="loginButton" layoutX="22.0" layoutY="224.0" mnemonicParsing="false" onAction="#loginButtonOnAction" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="36.0" prefWidth="243.0" style="-fx-background-color: #E96151; -fx-background-radius: 6px;" text="Login" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" />
+                <Button fx:id="exitButton" layoutX="22.0" layoutY="283.0" mnemonicParsing="false" onAction="#exitButtonOnAction" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="36.0" prefWidth="243.0" style="-fx-background-color: #E96151; -fx-background-radius: 6px;" text="Exit" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" />
+                <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="12.0" layoutY="57.0" prefHeight="17.0" prefWidth="256.0" textAlignment="CENTER" textFill="#e96151">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
