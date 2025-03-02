@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tlccoordinator.controllers.CControllerSidebar">
+    <top>
+        <Pane>
+            <Label fx:id="welcomeLabel" layoutX="530.0" layoutY="1.0" text="#Testo gestito via codice#" textFill="#e96151" BorderPane.alignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="exit" layoutX="1251.0" onMouseClicked="#exitOnMouseClicked" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="27.0" prefWidth="29.0" text="">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../images/close.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #faad9d;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <StackPane fx:id="contentArea" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children></AnchorPane>
+    </center>
+    <left>
+        <AnchorPane prefHeight="802.0" prefWidth="201.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="importazioniButton" layoutY="14.0" mnemonicParsing="false" onAction="#importazioniButtonOnAction" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="34.0" prefWidth="201.0" style="-fx-background-color: #E96151; -fx-background-radius: 0px;" text="Montaggio" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="backToLoginButton" layoutY="725.0" mnemonicParsing="false" onAction="#backToLoginButtonOnAction" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="34.0" prefWidth="201.0" style="-fx-background-color: #E96151; -fx-background-radius: 0px;" text="Torna alla login" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="preparazioneEquipeButton" layoutY="61.0" mnemonicParsing="false" onAction="#preparazioneEquipeButtonOnAction" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="34.0" prefWidth="201.0" style="-fx-background-color: #E96151; -fx-background-radius: 0px;" text="Preparazione Equipe" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            <Button fx:id="quadranteButton" layoutY="108.0" mnemonicParsing="false" onAction="#quadranteButtonOnAction" onMouseEntered="#modifyCursorOnMouseEntered" onMouseExited="#modifyCursorOnMouseExited" prefHeight="34.0" prefWidth="201.0" style="-fx-background-color: #E96151; -fx-background-radius: 0px;" text="Quadrante" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </AnchorPane>
+    </left>
+</BorderPane>
